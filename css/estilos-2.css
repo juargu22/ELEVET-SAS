@@ -1,0 +1,138 @@
+/* inicio BANNER */
+#banner{
+position: relative;
+width: 100%;
+height: 555px;
+}
+#banner .img-banner img{
+position: absolute;
+width: 100vw;
+height: 100%;
+z-index: 0;
+}
+#banner .img-banner .msg-banner{
+width: 75%;
+margin: 0 auto;
+}
+#banner  .msg{
+width: 100%;
+position: absolute;
+display: flex;
+justify-content: center;
+align-content: flex-end;
+flex-wrap: wrap;
+/* opacity: 0; */
+
+/* bottom: 200px;
+margin-left: 15%;
+transform: translateX(-40%); */
+}
+#banner .img-banner .msg h2{
+width: 70%;
+opacity: 1;
+text-align: center;
+font-size: 56px;
+color: #fff;
+text-shadow: 0px 5px 5px #8B0000;
+/*padding-left: 40px;*/
+transform: translateY(-40%);
+margin: 0 auto;
+}
+/* #banner #img3 #menasje3  h2
+#banner #img3 #menasje3  p,{
+margin-left: -50px;
+} */
+#banner .img-banner p{
+font-size: 36px;
+opacity: 1;
+color: #fff;
+/*padding-left: 50px;*/
+text-align: center;
+text-shadow: 0px 5px 5px #8B0000;
+}
+     /* ANIMACION BANNER  */
+
+@keyframes pasaImg {
+0%{
+opacity: 1;
+}
+30%{
+opacity: 1;
+}
+33%{
+opacity: 0;
+}
+98%{
+opacity: 0
+}
+100%{
+opacity: 0;
+}
+}
+
+#banner #img1{
+animation: pasaImg 21s linear 14s infinite;
+}
+#banner #img2{
+animation: pasaImg 21s linear 7s infinite;
+}
+#banner #img3{
+animation: pasaImg2 21s linear 0s infinite;
+}
+@keyframes pasaImg2 {
+0%{
+opacity: 1;
+}
+30%{
+opacity: 1;
+}
+33%{
+opacity: 0;
+}
+98%{
+opacity: 0
+}
+100%{
+opacity: 0;
+}
+}
+
+@keyframes text{
+0%{
+opacity: 0;
+transform: translateY(700%);
+}
+8%{
+opacity: 0;
+transform: translateY(500%);
+}
+15%{
+opacity: 1;
+transform: translateY(200%);
+}
+80%{
+opacity: 1;
+}
+90%{
+opacity: 1;
+transform: translateY(200%);
+}
+100%{
+opacity: 1;
+transform: translateY(200%);
+}
+}
+#banner #img1 #mensaje1{
+animation: text 21s linear 14s infinite;
+}
+#banner #img2 #mensaje2{
+margin-top: -8%;
+animation: text 21s linear 7s infinite;
+}
+#banner #img3 #mensaje3{
+animation: text 21s linear 0s infinite;
+}
+
+/* FIN ANIMACION BANNER  */
+
+/* FIN BANNER  */

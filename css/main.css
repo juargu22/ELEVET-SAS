@@ -1,0 +1,474 @@
+:root{
+  --redMain: #bf0c17;
+  --gris: #d0d5db;
+  --colorhover: #E2635F;
+  --letra: #252222;
+}
+/*------------------------------------------*/
+/*------------------------------------------*/
+/* ----------- FUENTES ---------------------*/
+@font-face {
+  font-family: "myriad-reg";
+  src: url("font/myriadpro/MYRIADPRO-REGULAR.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "myriad-bold";
+  src: url("font/myriadpro/MYRIADPRO-SEMIBOLD.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* -----------FIN FUENTES------------------- */
+/*------------------------------------------*/
+/*------------------------------------------*/
+
+/*------------------------------------------*/
+/*------------------------------------------*/
+/*-------- --ESTILOS GENERALES------------- */
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body{
+  width: 100vw;
+  background-color: var(--gris);
+  font-family: "myriad-reg";
+  margin: 0 auto;
+}
+a{
+  display: block;
+  width: 100%;
+}
+
+.contenedor{ /*estructura de la pagina, no cambiar*/
+  width: 1000px;
+  margin: 0 auto;
+}
+.ultimo{
+  margin-right: 0!important;
+  border-right: none!important;
+}
+
+h2{
+  font-size: 33px;
+  font-family: "myriad-bold";
+  color: var(--redMain);
+}
+p{
+  font-size: 16px;
+}
+
+/* -----------FIN ESTILOS GENERALES ------- */
+/*------------------------------------------*/
+/*------------------------------------------*/
+/*------------------------------------------*/
+/*------------- HEADER  ------------------- */
+
+    /* mensje superior */
+#header #men-superior{
+  width: 100%;
+  height: 30px;
+  background-color: var(--redMain);
+  overflow: hidden;
+}
+#header #men-superior ul{
+  display: flex;
+  height: 100%;
+  margin: 0 auto;
+}
+#header #men-superior ul li#men-1{
+  width: 40%;
+  height: 100%;
+}
+#header #men-superior ul li#men-2{
+  width: 60%;
+  height: 100%;
+}
+#header #men-superior ul li p{
+  font-family: "myriad-bold";
+  color: #fff;
+  line-height: 30px;
+  font-size: 18px;
+  padding: 0 5px;
+}
+#header #men-superior ul #men-2 ul{
+  display:grid;
+  grid-template-columns: 50px 50px 50px 90px 110px 50px 183px;
+}
+#header #men-superior ul #men-2 ul li span img{
+  width: 20px;
+  padding-top: 4px;
+  margin-left: 15px;
+}
+#header #men-superior ul #men-2 ul li a:hover{
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: var(--colorhover);
+  transition: .35s all;
+}
+         /* fin mensaje superior  */
+
+         /*  Inicio menu  */
+#nav-main{
+  display: grid;
+  grid-template-columns: 40% 60%;
+  height: 130px;
+}
+#nav-main #logo{
+  height: 100%;
+}
+#nav-main #logo img{
+  display: block;
+  width: 100%;
+  margin: 25px auto;
+}
+.main-menu{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  height: 100%;
+}
+.menu-item a{
+  font-family: "myriad-bold";
+  font-size: 24px;
+  text-align: center;
+  padding: 55px 0;
+  color: var(--redMain);
+  transition: all .2s ease;
+}
+.menu-item a:hover{
+  text-decoration: underline;
+  color: var(--colorhover);
+  text-shadow: 0px 2px 1px #8B0000;
+  transform: scale(1.2);
+}
+
+         /* Fin MENU  */
+/*------------------------------------------------------*/
+/*------------------------------------------------------*/
+/*------------------------------------------------------*/
+/*------------------------------------------------------*/
+
+/*----------------PESTAÑA INICIO---------------------*/
+         /* inicio BANNER */
+#banner{
+  position: relative;
+  width: 100%;
+  height: 555px;
+}
+#banner .img-banner img{
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+}
+#banner .msg{
+  opacity: 0;
+  width: 900px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: 200px;
+}
+#banner .img-banner .msg h2{
+  text-align: center;
+  font-size: 56px;
+  color: #fff;
+  text-shadow: 0px 5px 5px #8B0000;
+}
+#banner .img-banner p{
+  font-size: 36px;
+  opacity: 1;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 5px 5px #8B0000;
+}
+              /* ANIMACION BANNER  */
+
+#banner #img1{
+  animation-name: pasaImg;
+  animation-duration: 21s;
+  animation-iteration-count: infinite;
+  animation-delay: 14s;
+}
+#banner #img2{
+  animation-name: pasaImg;
+  animation-duration: 21s;
+  animation-iteration-count: infinite;
+  animation-delay: 7s;
+}
+#banner #img3{
+  animation-name: pasaImg;
+  animation-duration: 21s;
+  /* animation-timing-function: ease; */
+  animation-iteration-count: infinite;
+}
+@keyframes pasaImg{
+  0%{
+    opacity: 1;
+  }
+  30%{
+    opacity: 1;
+  }
+  34%{
+    opacity: 0;
+  }
+  98%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0.5;
+  }
+}
+
+
+#banner #mensaje3{
+  left: 0;
+  right: 0;
+  margin-top: 200px;
+  animation: text 21s linear 0s infinite;
+  /* animation-duration: 21s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite; */
+}
+#banner #mensaje2{
+  left: 0;
+  right: 0;
+  margin-top: 200px;
+  animation: text 21s linear 7s infinite;
+  /* animation-duration: 21s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-delay: 7s; */
+}
+#banner #mensaje1{
+  left: 0;
+  right: 0;
+  margin-top: 200px;
+  animation: text 21s linear 14s infinite;
+  /* animation-duration: 21s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-delay: 14s; */
+}
+@keyframes text{
+  0%{
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  8%{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  20%{
+    opacity: 1;
+    transform: rotateY(0%);
+  }
+  33%{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100%{
+    opacity: 0;
+  }
+}
+       /* FIN ANIMACION BANNER  */
+
+         /* FIN BANNER  */
+/*------------------------------------------*/
+/* -----------FIN HEADER ------------------ */
+/*------------------------------------------*/
+/*------------------------------------------*/
+/*------------. MAIN ---------------------- */
+
+          /*inicio BOTONES */
+#fondo-botones{
+  position: relative;
+  background-image: url(../img/botFondo.jpg);
+  width: 100%;
+  height: 360px;
+}
+#fondo-botones #botones{
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+#fondo-botones #botones .botonesrojos img{
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+#fondo-botones #botones .botonesrojos h2{
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+#fondo-botones #botones .botonesrojos p{
+  color: var(--letra);
+  font-size: 20px;
+  text-align: center;
+  margin: 20px 20px;
+}
+          /*fin BOTONES */
+
+          /*inicio SERVICIOS */
+#fondoserv{
+  background-image: url(../img/FONDO-ESTATICO-min.png);
+  background-repeat: no-repeat;
+  background-position:  center top;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 560px;
+}
+#img-serv h2{
+  text-align: center;
+  border-bottom: 6px solid var(--redMain);
+  padding: 40px 0 10px;
+}
+#img-serv p{
+  font-size: 28px;
+  color: var(--letra);
+  text-align: center;
+  margin: 30px auto 20px;
+}
+
+#servicios{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.fotos-serv{
+  display: flex;
+  margin: 20px 0;
+}
+
+.fotos-serv img{
+  width: 200px;
+  margin: auto;
+  filter: grayscale(1);
+  transform: translateX(40%);
+  transition: all .6s ease;
+}
+.fotos-serv ul{
+  margin: auto;
+  margin-left: 30px;
+  opacity: 0;
+  transform: translateX(60%);
+  transition: all .3s ease;
+}
+.fotos-serv ul li{
+  background-image: url(../img/icon-elevet.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 20px;
+  color: var(--letra);
+  margin: 10px 0;
+  padding-left: 25px;
+}
+
+      /*Animacion fotos dervicios*/
+.fotos-serv:hover img{
+  transform: translateX(-10%);
+  filter: grayscale(0);
+  transform: scale(1.5);
+}
+.fotos-serv:hover ul{
+  opacity: 1;
+  transform: translateX(8%);
+}
+    /*Fin Animacion fotos dervicios*/
+
+
+          /*fin SERVICIOS */
+
+/* -----------FIN MAIN ------------------ */
+/*------------------------------------------*/
+/*------------------------------------------*/
+/*------------. FOOTER ---------------------- */
+#footer #caja-redes #redes-sociales{
+  width: 60%;
+  margin: 50px auto 30px;
+  display: flex;
+}
+#footer #caja-redes #redes-sociales li{
+  background-color: var(--redMain);
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  margin: 0 auto;
+  transition: all .2s linear;
+}
+#footer #caja-redes #redes-sociales li:first-child{
+  margin-left: 20px;
+}
+#footer #caja-redes #redes-sociales li img{
+  width: 50px;
+  margin: 10px 0 0 10px;;
+}
+#footer #caja-redes #redes-sociales li:hover{
+  background-color: var(--colorhover);
+  box-shadow: 0 5px 2px  gray;
+  transform: scale(1.3);
+}
+
+#menu-inferior{
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px 5px;
+}
+#menu-inferior li{
+  height: 50px!important;
+}
+#menu-inferior li a{
+  padding: 0;
+  padding-top: 13px;
+}
+
+#bottom-main-box{
+  background: var(--redMain);
+  height: 130px;
+  padding-top: 5px;
+}
+#bottom-box ul{
+  display: flex;
+  width: 50%;
+  height: 20px;
+  padding-top: 2px;
+  margin: 30px auto;
+}
+#bottom-box ul li{
+  width: 200px;
+  text-align: center;
+  color: #fff;
+  border-right: 2px solid #fff;
+  margin: 0 auto;
+}
+
+#bottom-box p {
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  margin-top: 50px;
+}
+/* -----------FIN FOOTER ------------------ */
+/*------------------------------------------*/
+
+#prueba{
+  height: 200px;
+  position: relative;
+}
+#prueba p:last-child{
+  position: absolute;
+  bottom: 50px;
+  z-index: 2;
+}
