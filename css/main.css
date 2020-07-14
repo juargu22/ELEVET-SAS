@@ -42,9 +42,10 @@ html {
 }
 
 body{
-  width: 100vw;
+  width: 100%;
   background-color: var(--gris);
   font-family: "myriad-reg";
+  color: var(--letra);
   margin: 0 auto;
 }
 a{
@@ -53,7 +54,7 @@ a{
 }
 
 .contenedor{ /*estructura de la pagina, no cambiar*/
-  width: 1000px;
+  width: 80%;
   margin: 0 auto;
 }
 .ultimo{
@@ -127,10 +128,10 @@ p{
   grid-template-columns: 40% 60%;
   height: 130px;
 }
-#nav-main #logo{
+#nav-main #logo h1{
   height: 100%;
 }
-#nav-main #logo img{
+#nav-main #logo h1 img{
   display: block;
   width: 100%;
   margin: 25px auto;
@@ -161,16 +162,18 @@ p{
 /*------------------------------------------------------*/
 /*------------------------------------------------------*/
 
-/*----------------PESTAÑA INICIO---------------------*/
+/*----------------INICIO---------------------*/
+
          /* inicio BANNER */
 #banner{
   position: relative;
   width: 100%;
   height: 555px;
+  margin: 0 auto;
 }
 #banner .img-banner img{
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: 100%;
 }
 #banner .msg{
@@ -462,13 +465,150 @@ p{
 }
 /* -----------FIN FOOTER ------------------ */
 /*------------------------------------------*/
+/*------------------------------------------*/
 
-#prueba{
-  height: 200px;
-  position: relative;
-}
-#prueba p:last-child{
+        /*------  PAGINA SERVICIOS ----- */
+
+/*-------------------------------------------*/
+/*------------. SECTION 1 ------------------ */
+#banner .img-banner button{
   position: absolute;
-  bottom: 50px;
-  z-index: 2;
+  font-size: 1.4em;
+  font-weight: 600;
+  width: 190px;
+  height: 50px;
+  background-color: var(--redMain);
+  border-radius: 15px;
+  border: none;
+  left: 0px;
+  right: 0px;
+  bottom: 80px;
+  margin: 0 auto;
+  transition: all .3s;
 }
+#banner .img-banner button a{
+  color: #fff;
+}
+#banner .img-banner button:hover{
+  cursor: pointer;
+  background-color: var(--colorhover);
+  color: var(--gris);
+}
+#banner .img-banner button:focus{
+  border: none;
+  outline: none;
+}
+/*------------. FIN SECTION 1 -------------- */
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+        /* FIN SERVICIOS */
+
+
+
+          /* NOSOTROS */
+
+
+
+        /* FIN NOSOTROS */
+
+/*----------------------------------------------------------------------------------*/
+
+        /* PAGINA CONTACTENOS */
+
+     /*-----MAIN CONTACTENOS -----*/
+
+/*------formulario ---*/
+section#formulario{
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+}
+#formualrio form{
+  width: 100%;
+  padding: 20px;
+}
+#formulario form input{
+  width: 45%;
+  height: 40px;
+  padding-left: 10px;
+  border-radius: 5px;
+  transition: all .2s;
+  border: none;
+  margin: 20px;
+}
+#formulario form input:focus,
+#formulario form textarea:focus{
+  color: var(--letra);
+  outline: none;
+  border-bottom:  2px solid var(--redMain);
+  border-left: 2px solid var(--redMain);
+}
+#formulario form textarea{
+  width: 94.5%;
+  height: 100px;
+  border-radius: 5px;
+  transition: all .2s;
+  border: none;
+  padding: 10px;
+  margin: 20px;
+}
+#formulario form #enviar{
+  width: 25%;
+  transform: translateX(135%);
+  font-size: 1.5em;
+  background-color: var(--redMain);
+  color: var(--gris);
+  transition: all .3s linear;
+}
+#formulario form #enviar:hover{
+  background-color: var(--colorhover);
+  color: #fff;
+  cursor: pointer;
+}
+/*------fin FORMULARIO ----*/
+
+/*-------contactenos ------*/
+#main-contac #contactenos{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  height: auto;
+  margin: 60px 0;
+}
+#contactenos .info{
+  padding: 10px;
+}
+#contactenos .info h2,
+#contactenos .info h3,
+#contactenos .info p{
+  text-align: center;
+  width: 100%;
+}
+#contactenos .info h2{
+  padding: 0;
+  margin-top: 5px;
+  font-size: 3em;
+}
+#contactenos .info h3{
+  margin-top: 30px;
+  font-size: 1.5em;
+}
+#contactenos .info p{
+  font-size: 1.3em;
+}
+#contactenos .info hr{
+  box-shadow: 0px 3px 4px 1px var(--letra);
+  margin: 10px 0;
+}
+#contactenos .info .tel{
+  margin-top: 10px;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+
+/*----------------------------------------*/
+      /* FIN CONTACTENOS */
+/*----------------------------------------------------------------------------------*/
