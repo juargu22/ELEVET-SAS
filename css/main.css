@@ -9,16 +9,62 @@
 /* ----------- FUENTES ---------------------*/
 @font-face {
   font-family: "myriad-reg";
-  src: url("font/myriadpro/MYRIADPRO-REGULAR.woff");
+  src: url("font/MYRIADPRO-REGULAR.woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "myriad-bold";
-  src: url("font/myriadpro/MYRIADPRO-SEMIBOLD.woff");
+  src: url("font/MYRIADPRO-SEMIBOLD.woff");
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('font/icomoon.eot?ahvky1');
+  src:  url('font/icomoon.eot?ahvky1#iefix') format('embedded-opentype'),
+    url('font/icomoon.ttf?ahvky1') format('truetype'),
+    url('font/icomoon.woff?ahvky1') format('woff'),
+    url('font/icomoon.svg?ahvky1#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-f:before {
+  content: "\e900";
+}
+.icon-e:before {
+  content: "\e945";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-i:before {
+  content: "\ea92";
+}
+.icon-w:before {
+  content: "\ea93";
 }
 /* -----------FIN FUENTES------------------- */
 /*------------------------------------------*/
@@ -51,6 +97,7 @@ body{
 a{
   display: block;
   width: 100%;
+  height: 100%;
 }
 
 .contenedor{ /*estructura de la pagina, no cambiar*/
@@ -68,7 +115,22 @@ h2{
   color: var(--redMain);
 }
 p{
-  font-size: 16px;
+  font-size: 20px;
+  text-align: justify;
+}
+.menu-burger{
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  line-height: 40px;
+  position: fixed;
+  top: 73px;
+  left: 20px;
+  text-align: center;
+  font-size: 1.5em;
+  background-color: rgba(191, 12, 23, .7);
+  z-index: 5;
 }
 
 /* -----------FIN ESTILOS GENERALES ------- */
@@ -86,11 +148,12 @@ p{
 }
 #header #men-superior ul{
   display: flex;
-  height: 100%;
+  width: 90%;
+  height: auto;
   margin: 0 auto;
 }
 #header #men-superior ul li#men-1{
-  width: 40%;
+  width: 35%;
   height: 100%;
 }
 #header #men-superior ul li#men-2{
@@ -102,16 +165,23 @@ p{
   color: #fff;
   line-height: 30px;
   font-size: 18px;
-  padding: 0 5px;
+  padding: 0 3px;
 }
 #header #men-superior ul #men-2 ul{
   display:grid;
-  grid-template-columns: 50px 50px 50px 90px 110px 50px 183px;
+  grid-template-columns: 7% 7% 7% 14% 19% 21% 7% 24%;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-around; */
 }
-#header #men-superior ul #men-2 ul li span img{
-  width: 20px;
-  padding-top: 4px;
-  margin-left: 15px;
+#men-2 ul li span .icon-header{
+  display: block;
+  font-size: 25px;
+  text-align: center;
+  line-height: 30px;
+}
+#header #men-superior ul #men-2 ul li p{
+  text-align: center;
 }
 #header #men-superior ul #men-2 ul li a:hover{
   width: 100%;
@@ -131,11 +201,12 @@ p{
 #nav-main #logo h1{
   height: 100%;
 }
-#nav-main #logo h1 img{
+#nav-main #logo img{
   display: block;
   width: 100%;
-  margin: 25px auto;
+  margin: 0 auto;
 }
+
 .main-menu{
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
@@ -162,9 +233,11 @@ p{
 /*------------------------------------------------------*/
 /*------------------------------------------------------*/
 
-/*----------------INICIO---------------------*/
+              /*--------------------------------------*/
+                  /*------ PAGINA INICIO----------*/
+              /*--------------------------------------*/
 
-         /* inicio BANNER */
+  /* BANNER */
 #banner{
   position: relative;
   width: 100%;
@@ -182,7 +255,7 @@ p{
   position: absolute;
   left: 0;
   right: 0;
-  margin-top: 200px;
+  bottom: 200px;
 }
 #banner .img-banner .msg h2{
   text-align: center;
@@ -197,7 +270,7 @@ p{
   text-align: center;
   text-shadow: 0px 5px 5px #8B0000;
 }
-              /* ANIMACION BANNER  */
+/* ANIMACION BANNER  */
 
 #banner #img1{
   animation-name: pasaImg;
@@ -239,7 +312,6 @@ p{
 #banner #mensaje3{
   left: 0;
   right: 0;
-  margin-top: 200px;
   animation: text 21s linear 0s infinite;
   /* animation-duration: 21s;
   animation-timing-function: ease;
@@ -248,7 +320,6 @@ p{
 #banner #mensaje2{
   left: 0;
   right: 0;
-  margin-top: 200px;
   animation: text 21s linear 7s infinite;
   /* animation-duration: 21s;
   animation-timing-function: ease;
@@ -258,7 +329,6 @@ p{
 #banner #mensaje1{
   left: 0;
   right: 0;
-  margin-top: 200px;
   animation: text 21s linear 14s infinite;
   /* animation-duration: 21s;
   animation-timing-function: ease;
@@ -286,21 +356,17 @@ p{
     opacity: 0;
   }
 }
-       /* FIN ANIMACION BANNER  */
+/* FIN ANIMACION BANNER  */
 
-         /* FIN BANNER  */
-/*------------------------------------------*/
-/* -----------FIN HEADER ------------------ */
-/*------------------------------------------*/
-/*------------------------------------------*/
-/*------------. MAIN ---------------------- */
 
-          /*inicio BOTONES */
+/*--. MAIN INICIO --- */
+
+/*inicio BOTONES */
 #fondo-botones{
   position: relative;
   background-image: url(../img/botFondo.jpg);
   width: 100%;
-  height: 360px;
+  height: 380px;
 }
 #fondo-botones #botones{
   display: grid;
@@ -316,15 +382,18 @@ p{
   margin: 0 auto;
   margin-top: 20px;
 }
+.h2-cnt{
+  margin-top: 24px!important;
+}
 #fondo-botones #botones .botonesrojos p{
   color: var(--letra);
   font-size: 20px;
   text-align: center;
   margin: 20px 20px;
 }
-          /*fin BOTONES */
+  /*fin BOTONES */
 
-          /*inicio SERVICIOS */
+  /*inicio SERVICIOS */
 #fondoserv{
   background-image: url(../img/FONDO-ESTATICO-min.png);
   background-repeat: no-repeat;
@@ -332,7 +401,7 @@ p{
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
-  height: 560px;
+  height: 580px;
 }
 #img-serv h2{
   text-align: center;
@@ -352,12 +421,12 @@ p{
 }
 .fotos-serv{
   display: flex;
-  margin: 20px 0;
+  margin: 20px 0 10px;
 }
 
 .fotos-serv img{
-  width: 200px;
-  margin: auto;
+  min-width: 200px;
+  margin: 0;
   filter: grayscale(1);
   transform: translateX(40%);
   transition: all .6s ease;
@@ -366,7 +435,7 @@ p{
   margin: auto;
   margin-left: 30px;
   opacity: 0;
-  transform: translateX(60%);
+  transform: translateX(40%);
   transition: all .3s ease;
 }
 .fotos-serv ul li{
@@ -381,25 +450,25 @@ p{
 
       /*Animacion fotos dervicios*/
 .fotos-serv:hover img{
-  transform: translateX(-10%);
+  /* transform: translateX(-10%); */
   filter: grayscale(0);
-  transform: scale(1.5);
+  transform: scale(1.3);
 }
 .fotos-serv:hover ul{
   opacity: 1;
   transform: translateX(8%);
 }
-    /*Fin Animacion fotos dervicios*/
+/*Fin Animacion fotos dervicios*/
 
 
           /*fin SERVICIOS */
 
-/* -----------FIN MAIN ------------------ */
-/*------------------------------------------*/
-/*------------------------------------------*/
-/*------------. FOOTER ---------------------- */
+/*---FIN MAIN --- */
+
+
+/*--- FOOTER ---- */
 #footer #caja-redes #redes-sociales{
-  width: 60%;
+  width: 70%;
   margin: 50px auto 30px;
   display: flex;
 }
@@ -414,9 +483,11 @@ p{
 #footer #caja-redes #redes-sociales li:first-child{
   margin-left: 20px;
 }
-#footer #caja-redes #redes-sociales li img{
-  width: 50px;
-  margin: 10px 0 0 10px;;
+#footer #caja-redes #redes-sociales li .icon-footer{
+  display: block;
+  font-size: 46px;
+  text-align: center;
+  line-height: 67px;
 }
 #footer #caja-redes #redes-sociales li:hover{
   background-color: var(--colorhover);
@@ -435,6 +506,7 @@ p{
 #menu-inferior li a{
   padding: 0;
   padding-top: 13px;
+  line-height: 40px;
 }
 
 #bottom-main-box{
@@ -463,14 +535,17 @@ p{
   text-align: center;
   margin-top: 50px;
 }
-/* -----------FIN FOOTER ------------------ */
-/*------------------------------------------*/
-/*------------------------------------------*/
+/* ---FIN FOOTER ---*/
 
-        /*------  PAGINA SERVICIOS ----- */
 
-/*-------------------------------------------*/
-/*------------. SECTION 1 ------------------ */
+
+      /*--------------------------------------*/
+        /*------ PAGINA SERVICIOS ----------*/
+      /*--------------------------------------*/
+
+
+
+/*--- #BANNER SERV ------ */
 #banner .img-banner button{
   position: absolute;
   font-size: 1.4em;
@@ -482,12 +557,13 @@ p{
   border: none;
   left: 0px;
   right: 0px;
-  bottom: 80px;
+  bottom: 60px;
   margin: 0 auto;
   transition: all .3s;
 }
 #banner .img-banner button a{
   color: #fff;
+  line-height: 50px;
 }
 #banner .img-banner button:hover{
   cursor: pointer;
@@ -498,27 +574,146 @@ p{
   border: none;
   outline: none;
 }
-/*------------. FIN SECTION 1 -------------- */
-/*-------------------------------------------*/
-/*-------------------------------------------*/
 
-        /* FIN SERVICIOS */
+/* --- MAIN SERV ---*/
+
+#main-serv h2{
+  text-align: center;
+  width: 60%;
+  height: 35px;
+  margin: 40px auto;
+}
+ /* #main-serv #manto{
+   display: grid;
+   grid-template-columns: 40% 60%;
+ } */
+ #main-serv .serv{
+   display: flex;
+   margin: 30px 0;
+ }
+
+#main-serv .img-serv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  opacity: 0;
+  transition: all .3s;
+}
+#main-serv .img-serv img{
+  width: 100%;
+}
+.animar{
+  animation: manto-img .8s ease-out;
+}
+@keyframes manto-img {
+  from{
+    transform:  translateX(100%);
+    opacity: 0;
+  }
+  to{
+    transform:  translateX(0%);
+    opacity: 1;
+  }
+}
+
+#main-serv .text-serv ul{
+  width: 90%;
+  margin: 0 auto;
+}
+
+#main-serv .text-serv ul li{
+  background-image: url(../img/icon-elevet.png);
+  background-repeat: no-repeat;
+  background-position: left 5px;
+  background-size: 20px;
+  color: var(--letra);
+  margin: 20px 0;
+  padding: 5px;
+  padding-left: 25px;
+}
+
+#main-serv #venta{
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+#main-serv #venta .img-serv img{
+  width: 90%;
+  height: 500px;
+}
+
+/* #main-serv #actualiza{
+  display: grid;
+  grid-template-columns: 40% 60%;
+} */
+
+/*-------------------------------------------------------*/
+/*-------------------------------------------------------*/
+/*-------------------------------------------------------*/
+
+      /*--------------------------------------*/
+        /*------ PAGINA NOSOTROS ----------*/
+      /*--------------------------------------*/
+#banner .title-we{
+  position:absolute;
+  width: 65%;
+  text-align: center;
+  left: 18%;
+  top: 15%;
+  color: #fff;
+  text-shadow: 0px 5px 5px #8B0000;
+}
+
+#main-we h2{
+  text-align: center;
+  width: 50%;
+  height: 35px;
+  margin: 40px auto;
+}
+#main-we .p1{
+  width: 85%;
+  text-align: justify;
+  padding: 10px;
+  margin: 0 auto;
+}
+#main-we #nosotros{
+  display: grid;
+  grid-template-columns: 33.2% 33.2% 33.2%;
+  margin: 60px auto;
+}
+
+#main-we #nosotros .article-we{
+  width: 90%;
+  background-color: #ECE0E0;
+  border-top:30px solid var(--redMain);
+  padding: 15px;
+  margin: 0 auto;
+}
+#main-we #nosotros .article-we p{
+  text-align: center;
+}
+#main-we #nosotros .article-we img{
+  display: block;
+  width: 60%;
+  height: 170px;
+  margin: 15px auto;
+}
+#main-we #nosotros .article-we:nth-child(2) img{
+  margin-top: 90px;
+}
 
 
 
-          /* NOSOTROS */
 
+/*-------------------------------------------------------*/
+/*-------------------------------------------------------*/
+/*-------------------------------------------------------*/
 
+      /*--------------------------------------*/
+        /*------ PAGINA CONTACTENOS ----------*/
+      /*--------------------------------------*/
 
-        /* FIN NOSOTROS */
-
-/*----------------------------------------------------------------------------------*/
-
-        /* PAGINA CONTACTENOS */
-
-     /*-----MAIN CONTACTENOS -----*/
-
-/*------formulario ---*/
+/*----formulario ---*/
 section#formulario{
   width: 100%;
   height: auto;
@@ -570,8 +765,7 @@ section#formulario{
 
 /*-------contactenos ------*/
 #main-contac #contactenos{
-  display: grid;
-  grid-template-columns: 50% 50%;
+  display: block;
   width: 100%;
   height: auto;
   margin: 60px 0;
@@ -591,7 +785,7 @@ section#formulario{
   font-size: 3em;
 }
 #contactenos .info h3{
-  margin-top: 30px;
+  margin-top: 18px;
   font-size: 1.5em;
 }
 #contactenos .info p{
@@ -601,14 +795,78 @@ section#formulario{
   box-shadow: 0px 3px 4px 1px var(--letra);
   margin: 10px 0;
 }
+
+#contactenos .info .llamenos{
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
 #contactenos .info .tel{
   margin-top: 10px;
   font-size: 2.5em;
   font-weight: bold;
   margin-top: 20px;
 }
+#contactenos .llamenos .img-whatsapp img{
+  display: block;
+  width: 200px;
+  margin: 20px auto;
+}
+
+#contactenos #mapa{
+  width: 90%;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
 
 
-/*----------------------------------------*/
-      /* FIN CONTACTENOS */
-/*----------------------------------------------------------------------------------*/
+/*-------------------------------------------------------*/
+/*-------------------------------------------------------*/
+/*-------------------------------------------------------*/
+
+      /*--------------------------------------*/
+        /*------ PAGINA ENVIADO ----------*/
+      /*--------------------------------------*/
+
+#main-enviado{
+  margin: 60px auto;
+}
+#main-enviado h2,
+#main-enviado h4{
+  text-align: center;
+  width: 70%;
+  margin: 50px auto;
+}
+#main-enviado h2{
+  color: #fff;
+  text-shadow: 0px 5px 5px #8B0000;
+}
+#main-enviado img{
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+}
+#main-enviado h4{
+  font-size: 1.5em;
+}
+#main-enviado button{
+  display: block;
+  font-size: 1.4em;
+  font-weight: 600;
+  width: 190px;
+  height: 50px;
+  background-color: var(--redMain);
+  border-radius: 15px;
+  border: none;
+  margin: 10px auto;
+  transition: all .3s;
+}
+#main-enviado button:hover{
+  background-color: var(--colorhover);
+}
+#main-enviado button a{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+}
