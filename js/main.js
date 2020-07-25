@@ -1,3 +1,23 @@
+// MENU burger
+
+const menu = document.querySelector(".main-menu");
+const burger = document.querySelector("#burger");
+const cerrar = document.querySelector(".burger-item");
+
+burger.addEventListener('click', function(){
+    menu.classList.add('active');
+    burger.classList.add('quitar-burger');
+});
+
+cerrar.addEventListener('click', function(){
+  menu.classList.remove('active');
+  burger.classList.remove('quitar-burger');
+});
+
+
+
+
+
 //animacion pagina Servicios
 let animado = document.querySelectorAll(".img-serv");
 
