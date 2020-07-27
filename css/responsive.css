@@ -279,6 +279,10 @@
     display: block;
   }
 
+  .wsapp{
+    right: 10px;
+  }
+
   #menu-inferior{
     width: 95%;
   }
@@ -688,17 +692,21 @@
   }
 
   #contactenos .info .llamenos{
-    display: flex;
+    display: block;
   }
   #contactenos .info .llamenos-tel{
     width: 60%;
     padding-top: 20px;
+    margin: 0 auto;
   }
   #contactenos .info h3{
     font-size: 1.3em;
   }
   #contactenos .info .tel{
     font-size: 1.85em;
+  }
+  #contactenos .llamenos .img-whatsapp img{
+    display: none;
   }
   #contactenos #mapa{
     height: 250px;

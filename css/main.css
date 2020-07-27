@@ -125,20 +125,34 @@ p{
 }
 .menu-burger{
   display: none;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  line-height: 40px;
+  line-height: 48px;
   position: fixed;
-  top: 73px;
+  top: 35px;
   left: 20px;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 2em;
   background-color: rgba(191, 12, 23, .7);
   z-index: 5;
 }
 .quitar-burger{
   opacity: 0;
+}
+
+.wsapp{
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 2.8em;
+  line-height: 70px;
+  text-align: center;
+  background-color: #00bb2d;
+  z-index: 10;
 }
 
 /* -----------FIN ESTILOS GENERALES ------- */
@@ -233,6 +247,7 @@ p{
   height: 16%;
   line-height: 1.8em;
   padding-left: 15px;
+  cursor: pointer;
 }
 .main-menu .burger-item span{
   font-family: "myriad-bold";
@@ -838,10 +853,12 @@ section#formulario{
 }
 
 #contactenos #mapa{
+  position: relative;
   width: 90%;
   height: 500px;
   margin: 0 auto;
   margin-top: 50px;
+  z-index: 4;
 }
 
 

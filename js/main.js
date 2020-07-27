@@ -1,21 +1,28 @@
 // MENU burger
 
+const activar = window.matchMedia('screen and (max-width: 768px)');
 const menu = document.querySelector(".main-menu");
 const burger = document.querySelector("#burger");
 const cerrar = document.querySelector(".burger-item");
 
-burger.addEventListener('click', function(){
-    menu.classList.add('active');
-    burger.classList.add('quitar-burger');
-});
+console.log(activar);
+// activar.addListener(validation)
+//
+// function validation(event){
+//   console.log(event);
 
-cerrar.addEventListener('click', function(){
-  menu.classList.remove('active');
-  burger.classList.remove('quitar-burger');
-});
+  if (activar.matches = true) {
 
-
-
+    burger.addEventListener('click', function(){
+      menu.classList.add('active');
+      burger.classList.add('quitar-burger');
+    });
+    cerrar.addEventListener('click', function(){
+      menu.classList.remove('active');
+      burger.classList.remove('quitar-burger');
+    });
+  }
+// }
 
 
 //animacion pagina Servicios
@@ -25,7 +32,7 @@ function mostrarScroll(){
   let scrollTop = document.documentElement.scrollTop;
   for (var i = 0; i < animado.length; i++) {
     let alturaAnimado = animado[i].offsetTop;
-    if (alturaAnimado - 300 < scrollTop) {
+    if (alturaAnimado - 450 < scrollTop) {
       animado[i].style.opacity = 1;
       animado[i].classList.add("animar");
     }
