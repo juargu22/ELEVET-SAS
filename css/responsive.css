@@ -1,7 +1,16 @@
 /*-----------------------------------------*/
        /*   RESPONSIVE DESIGN    */
 /*-----------------------------------------*/
+/* @media (max-width:1440px){
+  body{
+    max-width: 1440px;
+  }
 
+  #header #men-superior{
+    width: 1440px!important;
+  }
+  
+} */
 @media (max-width: 1330px){
   /* PAGIAN SERVICIOS MAIN */
   #main-serv .text-serv ul li{
@@ -20,18 +29,6 @@
   .contenedor{
     width: 90%;
   }
-
-  #header #men-superior ul li#men-1{
-    width: 30%;
-  }
-  #header #men-superior ul li#men-2{
-    width: 70%;
-  }
-  #header #men-superior ul #men-2 ul{
-    display:grid;
-    grid-template-columns: 7% 7% 7% 14% 19% 21% 7% 24%;
-  }
-
 
   /*  PAGINA INICIO  */
   #banner{
@@ -83,30 +80,25 @@
 /*-------------------------------------------*/
 /*-------------------------------------------*/
 
+/* @media (max-width: 1774px){
+  #header #men-superior 
+} */
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
 @media (max-width: 1024px){
 
 /* HEADER */
 
-  #header #men-superior ul{
-    width: 98%;
-  }
-  #header #men-superior ul li p{
-    font-size: 16px;
-  }
-  #header #men-superior ul #men-2 ul{
-    display:grid;
-    grid-template-columns: 10% 10% 10% 15% 20% 22% 10%;
-  }
-  #header #men-superior ul li#men-1{
-    width: 35%;
-  }
-  #header #men-superior ul li#men-2{
-    width: 63%;
-  }
-  #men-2 ul li:last-child{
-    display: none;
+  #men-superior #men-1{
+    width: 40%;
   }
 
+  #men-superior ul #men-2 ul li:nth-child(5),
+  #men-superior ul #men-2 ul li:nth-child(6),
+  #men-superior ul #men-2 ul li:nth-child(7){
+    display: none;
+  }
 
   #nav-main{
     display: grid;
@@ -273,11 +265,7 @@
 /*-------------------------------------------*/
 /*-------------------------------------------*/
 
-@media (max-width:768px){
-
-  .menu-burger{
-    display: block;
-  }
+@media (max-width:768px){  
 
   .wsapp{
     right: 10px;
@@ -286,40 +274,20 @@
   #menu-inferior{
     width: 95%;
   }
+
   #footer #caja-redes #redes-sociales li:first-child{
     margin-left: 0;
   }
 
   /* HEADER */
 
-  #header #men-superior{
-    /* position: fixed; */
-    height: 40px;
-    z-index: 5;
-  }
-  #header #men-superior ul li#men-1{
-    width: 50%;
-  }
-  #header #men-superior ul li p{
-    height: 40px;
-    font-size: 20px;
-    line-height: 40px;
-  }
-  #header #men-superior ul #men-2 .remove{
+  #header #men-1{
     display: none;
-    visibility: hidden;
-  }
-  #header #men-superior ul #men-2 ul{
-    display:grid;
-    grid-template-columns: 15% 15% 15% 0% 0% 30% 15%;
   }
 
-  #header #men-superior ul #men-2 ul li{
-  }
-   #men-2 ul li span .icon-header{
-     font-size: 34px;
-     line-height: 40px;
-   }
+  #header ul .menu-burger{
+    display: block;
+  }  
 
    #nav-main{
      display: block;
@@ -352,8 +320,8 @@
      position: fixed;
      width: 50%;
      height: 250px;
-     z-index: 6;
-     top: 40px;
+     z-index: 11;
+     top: 48px;
      left: 0;
      background-color: rgba(208, 213, 219, .9);/*var(--redMain);*/
      transition: all .4s linear;
@@ -510,28 +478,15 @@
     width: 100%;
   }
     /* HEADER */
+
   #hader{
     width: 100vw;
   }
-  #header #men-superior ul li#men-1{
-    display: none;
-  }
-  #header #men-superior ul li#men-2{
-    width: 90%;
-    margin: 0 auto;
+
+    #men-2 ul li:last-child{
+      display: none;
     }
-  #header #men-superior ul li#men-2 ul li:nth-child(4),
-  #header #men-superior ul li#men-2 ul li:nth-child(5),
-  #header #men-superior ul li#men-2 ul li:nth-child(6){
-    display: none;
-  }
-  #header #men-superior ul #men-2 ul{
-    display:grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-around; */
-  }
+  
 
   #banner{
     height: 220px;
@@ -729,13 +684,14 @@
 
 @media (max-width:480px){
 
+
   .contenedor{
     width: 100%;
   }
-  .menu-burger{
+  /* .menu-burger{
     position: fixed;
     left: 5px;
-  }
+  } */
       /* HEADER */
   #nav-main #logo {
     width: 80%;

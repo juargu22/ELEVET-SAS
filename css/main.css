@@ -53,10 +53,15 @@
 
 .icon-menu:before {
   content: "\e9bd";
+  font-size: 24px;
 }
 .icon-cross:before {
   content: "\ea0f";
-  color: var(--letra);
+  color:  #fff;
+  position: absolute;
+  top: -18%;
+  left: 24px;
+  transition: all .3s;
 }
 .icon-e:before {
   content: "\ea84";
@@ -114,6 +119,12 @@ a{
   border-right: none!important;
 }
 
+h1{
+  position: absolute;
+  opacity: 0;
+  left: -500px;
+}
+
 h2{
   font-size: 33px;
   font-family: "myriad-bold";
@@ -125,26 +136,15 @@ p{
 }
 .menu-burger{
   display: none;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  line-height: 48px;
-  position: fixed;
-  top: 40px;
-  left: 20px;
-  text-align: center;
-  font-size: 2em;
-  background-color: rgba(191, 12, 23, .7);
-  z-index: 5;
-}
+} 
 .quitar-burger{
   opacity: 0;
 }
 
 .wsapp{
   position: fixed;
-  bottom: 40px;
-  right: 40px;
+  bottom: 16px;
+  right: 16px;
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -162,56 +162,63 @@ p{
 /*------------- HEADER  ------------------- */
 
     /* mensje superior */
+
 #header #men-superior{
-  width: 100%;
-  height: 30px;
+  position: fixed;
+  top: 0;  left: 0;  right: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 48px;
   background-color: var(--redMain);
-  overflow: hidden;
-}
-#header #men-superior ul{
-  display: flex;
-  width: 90%;
-  height: auto;
-  margin: 0 auto;
-}
-#header #men-superior ul li#men-1{
-  width: 35%;
-  height: 100%;
-}
-#header #men-superior ul li#men-2{
-  width: 60%;
-  height: 100%;
-}
-#header #men-superior ul li p{
-  font-family: "myriad-bold";
   color: #fff;
-  line-height: 30px;
-  font-size: 18px;
-  padding: 0 3px;
+  font-weight: bold;
+  box-shadow: 0 5px 5px #717171;
 }
-#header #men-superior ul #men-2 ul{
-  display:grid;
-  grid-template-columns: 7% 7% 7% 14% 19% 21% 7% 24%;
-  /* display: flex;
-  flex-direction: row;
-  justify-content: space-around; */
-}
-#men-2 ul li span .icon-header{
-  display: block;
-  font-size: 25px;
-  text-align: center;
-  line-height: 30px;
-}
-#header #men-superior ul #men-2 ul li p{
-  text-align: center;
-}
-#header #men-superior ul #men-2 ul li a:hover{
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  background-color: var(--colorhover);
-  transition: .35s all;
-}
+  #men-superior > ul{
+    display: flex;
+    flex-flow: row nowrap;
+    line-height: 48px;
+    padding: 0 24px;
+  }
+    #men-sueperior #men-1{
+      flex-grow: 1;
+      flex-basis: 30%;
+    }
+
+    #men-superior #men-2{
+      flex-grow: 1;
+      flex-basis: 70%;
+    }
+      #men-2 ul{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+
+        max-height: 48px;
+      }
+        #men-2 ul i{
+          font-size: 24px;
+          line-height: 48px;
+        }
+        #men-2 ul li p{
+          flex: 1;
+          text-align: center;
+        }
+        #men-2 ul .men-icons{
+          flex: 0 48px;
+          text-align: center;
+        }
+          .men-icons:hover{
+            background-color: var(--colorhover);
+          }
+
+        #men-2 ul .menu-burger{
+          display: none;
+        }
+
+        /* flex: 1 1 20em
+        flex: 2 2 20em */
+
          /* fin mensaje superior  */
 
          /*  Inicio menu  */
@@ -219,14 +226,20 @@ p{
   display: grid;
   grid-template-columns: 40% 60%;
   height: 100%;
+  margin-top: 48px;
 }
-#nav-main #logo h1{
+#nav-main #logo{
   height: 100%;
 }
+  #logo a{
+    display: flex;
+    align-items: center;
+  }
 #nav-main #logo img{
   display: block;
   width: 100%;
   margin: 0 auto;
+  align-self: center;
 }
 
 .main-menu{
@@ -507,47 +520,20 @@ p{
 
           /*fin SERVICIOS */
 
+           /* FRASE */
+
+
+
+           /* fin FRASE */
+
 /*---FIN MAIN --- */
 
 
 /*--- FOOTER ---- */
-#footer #caja-redes #redes-sociales{
-  width: 70%;
-  margin: 50px auto 30px;
-  display: flex;
-}
-#footer #caja-redes #redes-sociales li{
-  background-color: var(--redMain);
-  width: 70px;
-  height: 70px;
-  border-radius: 100%;
-  margin: 0 auto;
-  transition: all .2s linear;
-}
-#footer #caja-redes #redes-sociales li:first-child{
-  margin-left: 20px;
-}
-#footer #caja-redes #redes-sociales li .icon-footer{
-  display: block;
-  font-size: 46px;
-  text-align: center;
-  line-height: 67px;
-}
-#footer #caja-redes #redes-sociales li:hover{
-  background-color: var(--colorhover);
-  box-shadow: 0 5px 2px  gray;
-  transform: scale(1.3);
+#footer .frase-1{
+  
 }
 
-#menu-inferior{
-  width: 100%;
-}
-#menu-inferior li{
-  height: 50px!important;
-}
-#menu-inferior li a{
-  line-height: 50px;
-}
 
 #bottom-main-box{
   background: var(--redMain);
