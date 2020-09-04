@@ -35,9 +35,7 @@
     height: 500px;
   }
 
-  #fondoserv{
-    height: 580px ;
-  }
+  
   /* .fotos-serv{
     margin: 10px 0;
   } */
@@ -140,9 +138,9 @@
 
         /* PAGINA INICIO */
 
-  #fondoserv{
+  /* #fondoserv{
     height: 650px;
-  }
+  } */
   .fotos-serv{
     margin: 10px 0;
     overflow: hidden;
@@ -663,10 +661,10 @@
   #contactenos .llamenos .img-whatsapp img{
     display: none;
   }
-  #contactenos #mapa{
+  /* #contactenos #mapa{
     height: 250px;
     margin-top: 10px;
-  }
+  } */
 
       /*  PAGINA ENVIADO */
 
@@ -742,6 +740,20 @@
     width: 100%;
     margin: 20px auto;
   }
+
+  #men-inf{
+    width: 90%;
+    margin: 0 auto;
+  }
+    /
+    #men-inf p{
+      font-size: 16px;
+    }
+
+
+    #form-lnpg{
+      width: 90%;
+    }
 
       /* SERVICIOS */
 
