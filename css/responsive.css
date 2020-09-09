@@ -266,7 +266,8 @@
   #main-we #nosotros .article-we p{
     font-size: 16px;
   }
-}
+
+
 
 /*-------------------------------------------*/
 /*-------------------------------------------*/
@@ -457,6 +458,7 @@
     margin-top: 10px;
   }
   #formulario form input{
+    width: 43.8%;
     margin: 18px;
   }
   #formulario form #enviar{
@@ -792,7 +794,7 @@
   }
 
 
-.formulario form{
+#formulario form{
   padding: 0;
 }
 

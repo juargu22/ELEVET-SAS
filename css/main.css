@@ -882,16 +882,16 @@ p{
       /*--------------------------------------*/
 
 /*----formulario ---*/
-section.formulario{
+section #formulario{
   width: 100%;
   height: auto;
   margin-top: 50px;
 }
-.formulario form{
+#formulario form{
   width: 100%;
   padding: 20px;
 }
-.formulario form input{
+#formulario form input{
   width: 45%;
   height: 48px;
   padding-left: 10px;
@@ -900,15 +900,15 @@ section.formulario{
   border: none;
   margin: 20px;
 }
-.formulario form input:focus,
-.formulario form textarea:focus{
+#formulario form input:focus,
+#formulario form textarea:focus{
   color: var(--letra);
   outline: none;
   border-bottom:  2px solid var(--redMain);
   border-left: 2px solid var(--redMain);
 }
-.formulario form textarea{
-  width: 94.5%;
+#formulario form textarea{
+  width: 94%;
   height: 100px;
   border-radius: 5px;
   transition: all .2s;
@@ -916,7 +916,7 @@ section.formulario{
   padding: 10px;
   margin: 20px;
 }
-.formulario form #enviar{
+#formulario form #enviar{
   width: 25%;
   transform: translateX(135%);
   font-size: 1.5em;
@@ -924,7 +924,7 @@ section.formulario{
   color: var(--gris);
   transition: all .3s linear;
 }
-.formulario form #enviar:hover{
+#formulario form #enviar:hover{
   background-color: var(--colorhover);
   color: #fff;
   cursor: pointer;
