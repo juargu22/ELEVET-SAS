@@ -650,7 +650,7 @@ p{
   text-align: center;
 }
 .mapa iframe{
-  margin-top: 48px;
+  margin-top: 24px;
 }
 
 
@@ -885,11 +885,10 @@ p{
 section #formulario{
   width: 100%;
   height: auto;
-  margin-top: 50px;
 }
 #formulario form{
   width: 100%;
-  padding: 20px;
+  padding: 10px;
 }
 #formulario form input{
   width: 45%;
@@ -936,7 +935,6 @@ section #formulario{
   display: block;
   width: 100%;
   height: auto;
-  margin: 60px 0;
 }
 #contactenos .info{
   padding: 10px;
