@@ -616,7 +616,6 @@ p{
     }
       .actualiza ul li{
         flex-basis: 50%;
-        height: ;
         background-image: url(../img/icon-elevet.png);
         background-repeat: no-repeat;
         background-position: left center;
@@ -748,7 +747,6 @@ p{
 #main-serv h2{
   text-align: center;
   width: 60%;
-  height: 35px;
   margin: 40px auto;
 }
  /* #main-serv #manto{
@@ -882,7 +880,7 @@ p{
       /*--------------------------------------*/
 
 /*----formulario ---*/
-section #formulario{
+#formulario{
   width: 100%;
   height: auto;
 }

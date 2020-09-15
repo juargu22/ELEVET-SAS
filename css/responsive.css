@@ -255,7 +255,7 @@
   }
 
   #main-serv h2{
-    width: 75%;
+    width: 100%;
   }
   #main-serv .text-serv ul li p {
     font-size: 14px;
@@ -544,10 +544,10 @@
     padding-bottom: 5px;
   }
   #img-serv h2{
-    font-size: 1.2em;
+    font-size: 28px;
   }
   #img-serv p{
-    font-size: 1em;
+    font-size: 20px;
     padding: 0 15px;
   }
   #servicios{
@@ -564,12 +564,16 @@
     }
     .fotos-serv ul{
       width: 90%;
+      font-size: ;
       margin-left: 0;
       margin: 0 auto;
     }
+      #bottom-box ul li{
+        font-size: 14px;
+      }
 
 .we-are h3{
-  font-size: 24px;
+  font-size: 28px;
 }
 .we-are p{
   width: 80%;
@@ -600,7 +604,6 @@
 
   #main-serv h2{
     font-size: 1.5em;
-    line-height: 40px;
     margin: 20px auto 10px;;
   }
 
@@ -748,7 +751,7 @@
     width: 98%;
   }
   #bottom-box ul li{
-    font-size: .7em;
+    font-size: .7m;
     line-height: 20px;
   }
 
@@ -757,13 +760,17 @@
     height: 160px;
   }
   #banner .msg {
-    bottom: 40px;
+    bottom: 16px;
   }
   #banner .img-banner .msg h2 {
-    font-size: 1.3em;
+    font-size: 32px;
   }
   #banner .img-banner p {
-    font-size: .8em;
+    font-size: 20px;
+  }
+
+  #botones .botonesrojos{
+    margin-top: 16px;
   }
 
   #servicios{
@@ -773,6 +780,9 @@
     width: 100%;
     margin: 20px auto;
   }
+    .fotos-serv ul li{
+      font-size: 16px;
+    }
 
   .we-are h3{
     width: 90%;
@@ -789,6 +799,9 @@
 #actz-main{
   height: 500px;
 }
+  .actualiza h2{
+    font-size: 28px;
+  }
   .actualiza ul{
     display: block;
   }
@@ -796,6 +809,10 @@
 
 #formulario form{
   padding: 0;
+}
+
+#bottom-box ul li{
+  font-size: 14px;
 }
 
 
@@ -811,7 +828,7 @@
     line-height: 28px;
   }
   #main-serv h2{
-    font-size: 1em;
+    font-size: 28px;
   }
   #main-serv .text-serv ul{
     display: block;
