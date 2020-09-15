@@ -769,8 +769,11 @@
     font-size: 20px;
   }
 
+  #botones{
+    padding-top: 1px;
+  }
   #botones .botonesrojos{
-    margin-top: 16px;
+    margin-top: 15px;
   }
 
   #servicios{
